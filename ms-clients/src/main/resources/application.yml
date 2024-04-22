@@ -7,6 +7,10 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
-#  instance:
-#    instance-id:
+  instance:
+    instance-id: ${ms-clients.id}
 
+ms-clients:
+  id: ${spring.application.name}:${spring.application.instance-id:${random.value}}
+
+# Configurando o instance-id e resolvido o problema com dns
