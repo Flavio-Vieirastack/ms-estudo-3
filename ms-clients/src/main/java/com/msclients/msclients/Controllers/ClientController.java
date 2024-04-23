@@ -23,7 +23,13 @@ public class ClientController {
                 "Flavio emerson",
                 33
         );
+        var client2 = new ClientDTO(
+                "04867792382",
+                "Flavio José",
+                33
+        );
         create(client);
+        create(client2);
     }
 
     @Autowired
