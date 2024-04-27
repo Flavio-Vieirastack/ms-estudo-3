@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: ms-card-manager
+server:
+  port: 0
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    instance-id: ${ms-card-manager.id}
+
+ms-card-manager:
+  id: ${spring.application.name}:${spring.application.instance-id:${random.value}}
+
+# Configurando o instance-id e resolvido o problema com dns

@@ -22,6 +22,8 @@ public class ApiGatewayApplication {
 						.uri("lb://ms-clients"))
 				.route(p -> p.path("/cards/**")
 						.uri("lb://ms-cards"))
+				.route(p -> p.path("/card-manager/**")
+						.uri("lb://ms-card-manager"))
 				.build();
 	}
 }
